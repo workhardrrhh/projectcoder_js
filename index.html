@@ -5,34 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0f40c48f05.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./Assets/img/logo.png" type="image/x-icon">
+
     <title>Work Hard RRHH - Shop</title>
 </head>
 
 <body>
-
-    <!--navBar-->
-    <div class="nav-container">
-        <nav class="navbar">
-            <h1 class="navbar-logo">Shop.</h1>
-            <h1 class="ver-carrito" id="verCarrito"></h1>
-        </nav>
-    </div>
-
-
-    <!--banner-->
-    <div class="banner">
-        <div class="banner-container">
-            <h1>¡Encontrá trabajo hoy!</h1>
-            <p>Te ayudamos a alcanzar tus metas profesionales</p>
+    <main>
+        <!--navBar-->
+        <div class="nav-container">
+            <nav class="navbar">
+                <img src="assets/img/logo.png" alt="Logo" height="95" width="auto">
+                <div class="ver-carrito" id="verCarrito">
+                    <i class="fa-duotone fa-cart-shopping"></i>
+                </div>
+            </nav>
         </div>
-    </div>
 
-    <!--shop content-->
-    <div id="shopContent" class="shop-content"></div> 
+
+        <!--banner-->
+        <div class="banner">
+            <div class="banner-container">
+                <h1>¡Encontrá trabajo hoy!</h1>
+                <p>Te ayudamos a alcanzar tus metas profesionales</p>
+            </div>
+        </div>
+
+        <!--shop content-->
+        <div class="shop-title">
+            <h2>Selecciona el servicio que se ajuste más a tu necesidad</h2>
+        </div>
+        <div id="shopContent" class="shop-content"></div> 
     
 
-    <script src="services.js"></script>
-    <script src="app.js"></script>
+        <script src="services.js"></script>
+        <script src="app.js"></script>
+    </main>
 
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./assets/img/logo.png" alt="">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Categorías</h2>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Servicios</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+            </li>
+            <li>
+                    <a href="">Sobre mi</a>
+            </li>
+            </div>
+            <div class="box">
+                <h2>Seguime</h2>
+                    <div class="red-social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+            </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>WH RRHH</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
 </body>
 </html>
