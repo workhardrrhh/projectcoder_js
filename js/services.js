@@ -4,6 +4,7 @@ const servicios = [
         nombre: "CV Recien Graduado", 
         precio: 99,
         img: "https://images.pexels.com/photos/8106679/pexels-photo-8106679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        cantidad: 1,
     },
 
     { 
@@ -11,6 +12,7 @@ const servicios = [
         nombre: "CV Profesional", 
         precio: 129,
         img: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        cantidad: 1,
     },
 
     { 
@@ -18,5 +20,6 @@ const servicios = [
         nombre: "CV Ejecutivo", 
         precio: 179,
         img: "https://images.pexels.com/photos/3757946/pexels-photo-3757946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        cantidad: 1,
     },
 ];

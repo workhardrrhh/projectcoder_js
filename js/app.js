@@ -1,8 +1,9 @@
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 servicios.forEach((service) => {
     let content = document.createElement("div");
@@ -22,13 +23,36 @@ servicios.forEach((service) => {
     content.append(comprar);
 
     comprar.addEventListener("click", () => {
-        carrito.push({
-            id: service.id,
-            img: service.img,
-            nombre: service.nombre,
-            precio: service.precio,
-        });
+        const repeat  = carrito.some((reapeatService) => reapeatService.id == service.id);
+
+        if (repeat) {
+            carrito.map((serv) => {
+                if (serv.id === service.id) {
+                    serv.cantidad++;
+                }
+            });
+        }   else {
+            carrito.push({
+                id: service.id,
+                img: service.img,
+                nombre: service.nombre,
+                precio: service.precio,
+                cantidad: service.cantidad,
+            });
+        }
         console.log(carrito);
+        console.log(carrito.length);
+        carritoCounter();
+        saveLocal();
     });
 });
 
+
+//set item
+const saveLocal  = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+//get item
+
+JSON.parse(localStorage.getItem("carrito"));
