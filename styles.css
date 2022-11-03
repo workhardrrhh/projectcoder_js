@@ -217,6 +217,7 @@ body {
 
 .modal-header-button {
     cursor: pointer;
+    margin-left: 800px;
 }
 
 .modal-container > .modal-content {
@@ -229,8 +230,9 @@ body {
 }
 
 .modal-container > div > img {
-    height: 120px;
-    width: 120px;
+    height: 150px;
+    width: 185px;
+    margin-top: 20px;
 }
 
 .total-content {
@@ -238,16 +240,19 @@ body {
     padding: 20px;
     text-align: center;
     padding-top: 20px;
+    color: #ed6ea0;
 }
 
 /*delete button service*/
 .delete-service {
     cursor: pointer;
+    color: #ed6ea0;
+    font-weight: bold;
 }
 
 /*CarritoCounter*/
 .cantidad-carrito {
-    background-color: red;
+    background-color: #ed6ea0;
     color: white;
     border-radius: 50%;
     font-size: 12px;
