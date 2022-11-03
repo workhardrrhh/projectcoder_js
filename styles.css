@@ -27,6 +27,7 @@ body {
     margin-right: 35px;
     margin-top: 6vh;
     cursor: pointer;
+    color: rgb(99, 97, 97);
 }
 
 /*banner styles*/
@@ -239,6 +240,7 @@ body {
     font-size: 25px;
     padding: 20px;
     text-align: center;
+    margin-left: 200px;
     padding-top: 20px;
     color: #ed6ea0;
 }
