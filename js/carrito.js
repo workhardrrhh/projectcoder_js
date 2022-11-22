@@ -65,6 +65,30 @@ const pintarCarrito = () => {
     totalBuying.className = "total-content"
     totalBuying.innerHTML = `Total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
+
+    const botonCompra = document.createElement("button");
+    botonCompra.innerText = "Finalizar Compra";
+    botonCompra.id = "botonCompra";
+    botonCompra.className = "total-content";
+    totalBuying.append(botonCompra);
+
+    const finalizarCompra = document.getElementById("botonCompra");
+    
+    finalizarCompra.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Tu carrito esta vacío!',
+                text: 'Agrega productos al carrito para finalizar tu compra',
+            })
+        } else {
+            carrito.length = [];
+            carritoCounter();
+            saveLocal();
+            pintarCarrito();
+            location.href = "compra.html"
+        }
+    });
 };
 
 verCarrito.addEventListener("click", pintarCarrito);
@@ -76,14 +100,20 @@ const eliminarServicio = (id) => {
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
-});
+    });
+
+    Swal.fire({
+        icon: 'warning',
+        title: 'El producto se eliminó del carrito',
+    })
+
     carritoCounter();
     saveLocal();
     pintarCarrito();
 };
 
 
-const  carritoCounter =  () => {
+const carritoCounter =  () => {
     cantidadCarrito.style.display = "block";
 
     const carritoLength = carrito.length;
